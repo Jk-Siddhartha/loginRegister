@@ -1,13 +1,277 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Stalemate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  transition: all 0.3s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Navlink{
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+}
+
+.App{
+  width: 100%;
+  height: 100vh;
+}
+
+/* navbar css here */
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5% 4%;
+}
+
+.logo{
+  /* border: 1px solid red; */
+  text-transform: uppercase;
+  font-family: 'Stalemate', cursive;
+  font-weight: 900;
+  font-size: 1.2em;
+  color: #eb2f06;
+}
+
+.nav-links{
+  /* border: 1px solid red; */
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* all btn css here  */
+.btn{
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 1% 4%;
+  cursor: pointer;
+
+}
+
+.login,.register:hover{ 
+  border: 1px solid #8e44ad;
+  background: #8e44ad;
+  color: #fff;
+}
+
+.login:hover,.register{
+  border: 1px solid #8e44ad;
+  color: #8e44ad;
+  background: #fff;
+}
+
+.start{
+  font-size: 1.3em;
+}
+
+.hero-section,.login-page,.register-page{
+  padding: 0 4%;
+  width: 100%;
+  height: 89.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section{
+  gap: 3%;
+}
+
+.hero-section h1{
+  text-align: center;
+}
+
+.hero-section h1 span{
+  color: #eb2f06;
+  font-weight: 900;
+}
+
+.login-page-container{
+  display: flex;
+  width: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.login-hero-img{
+  width: 50%;
+}
+
+.login-page-fields{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-page-fields{
+  gap: 5%;
+}
+
+.login-logo{
+  width: 35%;
+}
+
+#outlined-basic{
+  padding: 6% 4%;
+  width: 35vh;  
+}
+
+.login-page-fields .login,.register-page-fields .register{
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 1.5% 8%;
+}
+
+.login-page-fields p{
+  font-weight: 700;
+}
+
+.login-page-fields .Navlink{
+  color: #8e44ad;
+}
+
+
+/* register page css here  */
+
+.register-page-container{
+  display: flex;
+  width: 60%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.register-hero-img{
+  width: 50%;
+}
+
+.register-logo{
+  width: 30%;
+}
+
+.register-page-fields{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 55%;
+  gap: 3%;
+  padding: 4% 1%;
+}
+
+.register-page-fields p{
+  font-weight: 700;
+}
+
+
+.register-page-fields #outlined-basic{
+  padding: 6% 4%;
+  width: 35vh;  
+}
+
+
+/* media query start here  */
+
+@media screen and (max-width:480px) {
+  
+  .navbar{
+    padding: 3% 4%;
+  }
+
+  .nav-links{
+    width: 45%;
+    justify-content: space-between;
+  }
+
+  .hero-section h1{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .login-page-container{
+    width: 85%;
+  }
+
+  .login-hero-img {
+    display: none;
+  }
+
+  .login-page-fields{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 5% 0;
+  }
+
+  /* #outlined-basic{
+    width: 16rem;
+  } */
+
+  .register-hero-img{
+    display: none;
+  }
+
+  .register-page-container{
+    width: 90%;
+  }
+
+    .register-page-fields{
+    width: 100%;
+    padding: 5% 1%;
+    gap: 0.8rem;
+  }
+
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .navbar{
+    padding: 3% 4%;
+  }
+
+  .nav-links{
+    width: 25%;
+    justify-content: space-between;
+  }
+
+  .hero-section h1{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .login-page-container{
+    width: 85%;
+  }
+
+  .login-page-fields{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 5% 0;
+  }
+
+  /* #outlined-basic{
+    width: 16rem;
+  } */
+
+  .register-page-container{
+    width: 90%;
+  }
+
+    .register-page-fields{
+    width: 100%;
+    padding: 5% 1%;
+    gap: 0.8rem;
+  }
 }
